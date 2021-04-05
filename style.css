@@ -1,0 +1,557 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+<!--
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+  font-family: 'Raleway', sans-serif;
+}
+.slides-bg-1{background: url(img/bg-slide.jpg);}
+.slicknav_menu{display: none;}
+.slider_area{
+  background-size: cover;
+  background-position: center;
+  background-color: #ddd;
+  height: 960px;
+}
+p{
+  color:#777777;
+  font-size: 16px;
+  line-height:20px;
+}
+ul#menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: right;
+}
+
+ul#menu li {
+  display: inline-block;
+  position: relative;
+}
+
+ul#menu li a {
+  display: block;
+  text-transform: uppercase;
+  color: #222;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 30px 20px;
+  text-decoration: none;
+}
+
+.portfolio p{
+  margin: 30px 20px;
+  margin-left: 28%;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-weight: 400;
+}
+.header-button a {
+  text-decoration: none;
+  color: #1769ff;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 24px 15px;
+  border-radius: 50px;
+  border: 3px solid #1769ff;
+  width: 50%;
+}
+.header-button a:hover {
+  opacity: .8;
+  color: #abaaa9;
+}
+.me {
+  display: table;
+  width: 100%;
+  height: 100%;
+  margin-top: 254px;
+  margin-left: 219px;
+}
+.me h3 {
+  font-size: 36px;
+  font-weight: 300;
+  color: #9c9b9a;
+}
+
+.me h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #9c9b9a;
+}
+.me a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 30px;
+    border: 2px solid #1769ff;
+}
+.Services_area{
+  margin-top: 170px;
+  height: 750px;
+}
+.Services p {
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-weight: 400;
+}
+.Services-wrapper{
+  margin-top: 80px;
+  height: 100%;
+  width:100%;
+  padding: 60px 30px;
+}
+.Services-wrapper img {
+    margin-bottom: 50px;
+}
+.Services-wrapper h4{
+  color:#222222;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.Services-wrapper p{
+
+}
+.Services-wrapper-middle{
+  margin-top: 80px;
+  background-color: #1769ff;
+  height: 318px;
+  width: 370px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 15px 10px #fff;
+}
+.Services-wrapper-middle img {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.Services-wrapper-middle h4{
+  color:#fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.Services-wrapper-middle p{
+  color:#fff;
+  line-height:20px;
+}
+.portfolio-area{
+  height: 1280px;
+  width: 100%;
+  margin-top: 80px;
+  background-color: #f4f4f4;
+  
+}
+
+.portfolio-item{
+  margin: 30px 30px;
+  
+}
+
+.portfolio-wized p{
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-weight: 400;
+  margin-top: 150px;
+  margin-bottom: 90px;
+}
+.ctn_area{
+  height: 340px;
+  width: 100%;
+  margin-top: 145px;
+}
+.ctn-btn{
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 40px 15px;
+  border-radius: 50px;
+  border: 3px solid #1769ff;
+  width: 175px;
+}
+.ctn-btn a{color: #1769ff;}
+.ctn-1 h3{
+    font-size: 36px;
+    font-weight: 400;
+    color: #333333;
+}
+.testimonial_area{
+  height: 875px;
+  width: 100%;
+  background-color: #F4F4F4;
+}
+.testimonial-wized{
+  margin-top: 170px;
+}
+.testimonial-wized h1{
+  font-size: 50px;
+  font-weight: 400;
+  color: #0a0b0c;
+  margin-bottom: 65px;
+}
+.testimonial-wized p{
+  font-size: 16px;
+  color: #9c9b9a; 
+  line-height: 18px;  
+}
+.testimonial-wized-img{
+  margin-bottom: 35px;
+  margin-top: 55px;
+}
+.testimonial-wized-img p{
+  margin-top: 15px;
+  font-size: 16px;
+  color: #0a0b0c;
+}
+.footer_area{
+  width: 100%;
+  height: 310px;
+}
+.footer-wized{
+  margin-top: 100px;
+}
+ul#footer-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul#footer-menu li {
+  display: inline-block;
+}
+
+ul#footer-menu li a {
+  margin: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #777777;
+} 
+ul#footer-menu li a:hover{
+  opacity: .8;
+  color: #1778f7;
+
+}
+.form-control{
+  border-radius: 20px;
+  height: 45px;
+  font-weight: 240px;
+}
+
+.footer-social{
+  margin-top: 70px;
+
+}
+a.fb {
+  width: 50px;
+  height: 50px;
+  background: #ddd;
+  border-radius: 50%;
+  margin-left: 50px;
+  color: #222;
+}
+a.fb:hover{
+  opacity: .8;
+}
+a.fb-1{
+  width: 50px;
+  height: 50px;
+  background: #32ccfe;
+  border-radius: 50%;
+  margin-left: 50px;
+  color: #fff;
+}
+a.fb-1{
+  opacity: .8;
+}
+i.fa-fw {
+  vertical-align: middle;
+  padding: 5px;
+}
+.footer-bottom{
+  width: 100%;
+  height: 120px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-bottom-area{
+  margin-top: 50px;
+  color: #abaaa9;
+  font-size: 16px;
+  
+}
+
+
